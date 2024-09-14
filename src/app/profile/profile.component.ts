@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../auth.service';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-profile',
@@ -26,7 +27,7 @@ export class ProfileComponent implements OnInit {
         'Authorization': `Bearer ${token}`
       });
 
-      this.http.get<any>('http://localhost:2001/api/users/profile', { headers })
+      this.http.get<any>(`${environment.backendUrl}/api/users/profile`, { headers })
         .subscribe(
           data => {
             this.user = data; // Assign the fetched user data to this.user
