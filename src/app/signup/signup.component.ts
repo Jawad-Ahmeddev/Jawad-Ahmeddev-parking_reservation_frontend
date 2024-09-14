@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-signup',
@@ -34,7 +35,7 @@ export class SignupComponent implements OnInit {
 
   onSubmit(): void {
     if (this.signupForm.valid) {
-      this.http.post('http://localhost:2001/api/auth/register', this.signupForm.value)
+      this.http.post(`${environment.backendUrl}/api/auth/register`, this.signupForm.value)
         .subscribe(
           () => {
             this.router.navigate(['/login']); // Redirect to login after successful registration
