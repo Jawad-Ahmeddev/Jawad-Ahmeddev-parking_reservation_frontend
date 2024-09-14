@@ -2,12 +2,13 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  private apiUrl = 'http://localhost:2001/api/auth'; // Adjust this to your backend URL
+  private apiUrl = `${environment.backendUrl}/api/auth`; // Adjust this to your backend URL
 
   constructor(private http: HttpClient, private router: Router) {}
 
