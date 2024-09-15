@@ -8,6 +8,7 @@ import { environment } from 'src/environments/environment';
 })
 export class ReservationService {
   private baseUrl = `${environment.backendUrl}/api/parking`;
+    console.log(`${environment.backendUrl}`)
 
   constructor(private http: HttpClient) { }
 
