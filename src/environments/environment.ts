@@ -1,3 +1,3 @@
 export const environment = {
-    backendUrl: 'http://localhost:2001'
+    backendUrl: 'https://parking-reservation-system-sigma.vercel.app'
 }
