@@ -11,6 +11,8 @@ export class SocketService {
 
   constructor() {
     this.socket = io(`${environment.backendUrl}`); // Update with your backend URL
+        console.log(`${environment.backendUrl}`)
+
   }
 
   onUpdateParkingStatus(): Observable<void> {
