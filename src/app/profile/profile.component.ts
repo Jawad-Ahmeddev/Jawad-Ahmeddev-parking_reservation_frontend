@@ -21,7 +21,6 @@ export class ProfileComponent implements OnInit {
 
   loadUserProfile(): void {
     const token = this.authService.getToken();
-    console.log(`${environment.backendUrl}`)
     if (token) {
       const headers = new HttpHeaders({
         'Authorization': `Bearer ${token}`
