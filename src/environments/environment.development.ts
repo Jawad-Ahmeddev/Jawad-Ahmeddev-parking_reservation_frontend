@@ -1,4 +1,4 @@
 export const environment = {
-    backendUrl: 'https://parking-reservation-system-qmxd.vercel.app'
+    backendUrl: 'https://parking-reservation-system-three.vercel.app'
 
 };
